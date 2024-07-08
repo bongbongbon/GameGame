@@ -10,7 +10,9 @@
         <module name="gamegame.quiz_service.main" />
         <module name="gamegame.main" />
         <module name="gamegame.board_service.main" />
+        <module name="gamegame.global.main" />
         <module name="gamegame.user_service.main" />
+        <module name="gamegame.auth_service.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
