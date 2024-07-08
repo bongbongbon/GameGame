@@ -36,4 +36,6 @@
         - RDS의 mysql 서비스를 이용해 데이터베이스 구축
         - S3로 이미지 저장
 
-https://github.com/bongbongbon/GameGame/issues/1#issue-2395474952
+## ERD
+
+<img width="862" alt="스크린샷 2024-07-08 오후 9 12 41" src="https://github.com/bongbongbon/GameGame/assets/106155992/438a3a58-9350-4f29-84b2-b8536f8be6db">
