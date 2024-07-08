@@ -1,6 +1,0 @@
-rootProject.name = 'gamegame'
-include 'user_service'
-include 'quiz_service'
-include 'board_service'
-include 'auth_service'
-include 'global'
