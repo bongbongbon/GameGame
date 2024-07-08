@@ -34,3 +34,6 @@
         - AWS 프리티어 램 메모리 부족으로  디스크 용량을 이용해서 메모리를 대체하는 swap메모리 사용
         - RDS의 mysql 서비스를 이용해 데이터베이스 구축
         - S3로 이미지 저장
+
+## ERD
+<img width="862" alt="스크린샷 2024-07-08 오후 9 12 41" src="https://github.com/bongbongbon/GameGame/assets/106155992/438a3a58-9350-4f29-84b2-b8536f8be6db">
