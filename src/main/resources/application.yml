@@ -19,10 +19,14 @@ spring:
           predicates:
             - Path=/user_service/**
         - id: board_service
-          uri: http://localhost:8081/
+          uri: http://localhost:8082/
           predicates:
             - Path=/board_service/**
         - id: quiz_service
-          uri: http://localhost:8081/
+          uri: http://localhost:8083/
           predicates:
             - Path=/quiz_service/**
+        - id: global
+          uri: http://localhost:8084/
+          predicates:
+            - Path=/global/**
