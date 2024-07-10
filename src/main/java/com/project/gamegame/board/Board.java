@@ -11,8 +11,10 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-public class Board extends BaseEntity {@Id
-@GeneratedValue(strategy= GenerationType.IDENTITY)
+public class Board extends BaseEntity {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long boardID;
     private String boardName;
     private String user;//[1]

@@ -1,5 +1,6 @@
 package com.project.gamegame.quiz.service;
 
+import com.project.gamegame.common.exception.CustomException;
 import com.project.gamegame.quiz.controller.ObjectiveQuestion.request.ObjectiveQuestionRequest;
 import com.project.gamegame.quiz.controller.ObjectiveQuestion.response.ObjectiveQuestionResponse;
 import com.project.gamegame.quiz.domain.ObjectiveQuestion;
@@ -27,7 +28,7 @@ public class ObjectiveQuestionService {
 
 
         return ObjectiveQuestionResponse.fromEntity(objectiveQuestionRepository.findById(id)
-                .orElseThrow(()-> new RuntimeException("객관식 문제 없음")));
+                .orElseThrow(()-> CustomException.OBJECTIVE_QUESTION_NOT_FOUND));
     }
 
 
@@ -46,7 +47,7 @@ public class ObjectiveQuestionService {
     // 객관식 문제 수정
     public ObjectiveQuestionResponse updateQuestion(Long id, ObjectiveQuestionRequest request) {
         ObjectiveQuestion objectiveQuestion = objectiveQuestionRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("객관식 문제 없음"));
+                .orElseThrow(() -> CustomException.OBJECTIVE_QUESTION_NOT_FOUND);
 
         objectiveQuestion.setQuestion(request.getQuestion());
         objectiveQuestion.setOptions(request.getOptions());
@@ -57,7 +58,7 @@ public class ObjectiveQuestionService {
     // 객관식 문제 삭제
     public void deleteQuestion(Long id) {
         ObjectiveQuestion objectiveQuestion = objectiveQuestionRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("객관식 문제 없음"));
+                .orElseThrow(() -> CustomException.OBJECTIVE_QUESTION_NOT_FOUND);
 
         objectiveQuestionRepository.delete(objectiveQuestion);
     }

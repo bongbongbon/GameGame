@@ -18,6 +18,8 @@ import java.util.List;
 @RestControllerAdvice(annotations = RestController.class)
 public class ErrorController {
 
+
+    // CustomException 처리
     @ExceptionHandler(CustomException.class)
     protected ResponseEntity<ApiErrorResponse> handleBaseException(CustomException e) {
         return ResponseEntity
@@ -29,10 +31,13 @@ public class ErrorController {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     protected ApiErrorResponse handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+
         List<String> params = new ArrayList<>();
+
         for (FieldError error : e.getBindingResult().getFieldErrors()) {
             params.add(error.getField() + ": " + error.getDefaultMessage());
         }
+
         String errorMessage = String.join(", ", params);
 
         ApiErrorResponse response = ApiErrorResponse.from(ErrorCode.VALIDATION_FAILED);
@@ -41,6 +46,8 @@ public class ErrorController {
         return response;
     }
 
+
+    // 에상하지 못한 에러 처리
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(RuntimeException.class)
     protected ApiErrorResponse handleRuntimeException(RuntimeException e) {

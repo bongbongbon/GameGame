@@ -10,6 +10,8 @@ public class CustomException extends RuntimeException{
 
     public static final CustomException USER_NOT_FOUND = new CustomException(ErrorCode.USER_NOT_FOUND);
     public static final CustomException VALIDATION_FAILED = new CustomException(ErrorCode.VALIDATION_FAILED);
+    public static final CustomException SUBJECTIVE_QUESTION_NOT_FOUND = new CustomException(ErrorCode.SUBJECTIVE_QUESTION_NOT_FOUND);
+    public static final CustomException OBJECTIVE_QUESTION_NOT_FOUND = new CustomException(ErrorCode.OBJECTIVE_QUESTION_NOT_FOUND);
 
     private final ErrorCode errorCode;
 

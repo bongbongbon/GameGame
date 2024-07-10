@@ -1,5 +1,6 @@
 package com.project.gamegame.quiz.service;
 
+import com.project.gamegame.common.exception.CustomException;
 import com.project.gamegame.quiz.controller.ObjectiveQuestion.request.ObjectiveQuestionRequest;
 import com.project.gamegame.quiz.controller.ObjectiveQuestion.response.ObjectiveQuestionResponse;
 import com.project.gamegame.quiz.controller.SubjectiveQuestion.request.SubjectiveQuestionRequest;
@@ -31,7 +32,7 @@ public class SubjectiveQuestionService {
 
 
         return SubjectiveQuestionResponse.fromEntity(subjectiveQuestionRepository.findById(id)
-                .orElseThrow(()-> new RuntimeException("객관식 문제 없음")));
+                .orElseThrow(()-> CustomException.SUBJECTIVE_QUESTION_NOT_FOUND));
     }
 
 
@@ -49,7 +50,7 @@ public class SubjectiveQuestionService {
     // 객관식 문제 수정
     public SubjectiveQuestionResponse updateQuestion(Long id, SubjectiveQuestionRequest request) {
         SubjectiveQuestion subjectiveQuestion = subjectiveQuestionRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("객관식 문제 없음"));
+                .orElseThrow(() -> CustomException.SUBJECTIVE_QUESTION_NOT_FOUND);
 
         subjectiveQuestion.setQuestion(request.getQuestion());
         subjectiveQuestion.setAnswer(request.getAnswer());
@@ -59,7 +60,7 @@ public class SubjectiveQuestionService {
     // 객관식 문제 삭제
     public void deleteQuestion(Long id) {
         SubjectiveQuestion subjectiveQuestion = subjectiveQuestionRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("객관식 문제 없음"));
+                .orElseThrow(() -> CustomException.SUBJECTIVE_QUESTION_NOT_FOUND);
 
         subjectiveQuestionRepository.delete(subjectiveQuestion);
     }
