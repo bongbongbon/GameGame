@@ -1,5 +1,5 @@
 package com.project.gamegame.board;
-import com.project.gamegame.BaseEntity;
+import com.project.gamegame.common.model.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
