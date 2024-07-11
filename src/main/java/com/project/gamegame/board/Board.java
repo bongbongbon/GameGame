@@ -11,22 +11,26 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-public class Board extends BaseEntity {
-
-    @Id
+public class Board extends BaseEntity { @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long boardID;
     private String boardName;
-    private String user;//[1]
+    private String userName;//[1]
     private String title;//[1]
     private String contents;//[1]
     private String views;//[1]
     private String review;
+    private String reply;
+    private Long hits;//[1]
+    private Long likes;//[1]
 
     public void boardUpdate(BoardRegister boardRegister){
         this.boardName=boardRegister.getBoardName();
-        this.user=boardRegister.getUser();
+        this.userName =boardRegister.getUserName();
         this.title=boardRegister.getTitle();
         this.contents=boardRegister.getContents();
         this.views=boardRegister.getViews();
-        this.review=boardRegister.getReview();}}
+        this.review=boardRegister.getReview();
+        this.reply=boardRegister.getReply();
+        this.hits=boardRegister.getHits();
+        this.likes=boardRegister.getLikes();}}

@@ -1,5 +1,5 @@
 package com.project.gamegame.board;
-import com.project.gamegame.DuplicationNameException;
+import com.project.gamegame.common.exception.DuplicationNameException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,4 +35,7 @@ public class BoardController {
     @DeleteMapping("/delete/{boardID}")
     public void deleteBoard(@PathVariable Long boardID){
         boardService.deleteBoard(boardID);}
-}
+
+    @PatchMapping("/{boardID}/hits")
+    public void boardHits(@PathVariable Long boardID){
+        boardService.boardHits(boardID);}}//[3]

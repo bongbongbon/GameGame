@@ -1,7 +1,8 @@
 package com.project.gamegame.board;
-import com.project.gamegame.DuplicationNameException;
+import com.project.gamegame.common.exception.DuplicationNameException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 @Service
 @Transactional
@@ -21,4 +22,10 @@ public class BoardService {private final BoardRepository boardRepository;
         saved.boardUpdate(boardRegister);return saved;}
 
     public void deleteBoard(Long boardID) {
-        boardRepository.deleteByBoardID(boardID);}}
+        boardRepository.deleteByBoardID(boardID);}
+
+    public void boardHits(Long boardID){
+        Board board=boardRepository.findById(boardID)
+ .orElseThrow(()->new BoardNotFoundException("공지사항 글 없음"));
+        board.setHits(board.getHits()+1);
+    boardRepository.save(board);}}//[3]
