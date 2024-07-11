@@ -1,0 +1,143 @@
+PATCH http://localhost:8080/board/3/hits
+Content-Type: application/x-www-form-urlencoded
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-11T001709.500.json
+
+###
+
+PATCH http://localhost:8080/board/2/hits
+Content-Type: application/x-www-form-urlencoded
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-11T001705.500.json
+
+###
+
+POST http://localhost:8080/board
+Content-Type: application/json
+Content-Length: 145
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "2",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-11T001659.201.json
+
+###
+
+POST http://localhost:8080/board
+Content-Type: application/json
+Content-Length: 145
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "e",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-11T001656.409.txt
+
+###
+
+POST http://localhost:8080/board
+Content-Type: application/json
+Content-Length: 145
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "e",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-11T001655.201.json
+
+###
+
+POST http://localhost:8080/board
+Content-Type: application/json
+Content-Length: 144
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-11T001645.409.txt
+
+###
+
+PATCH http://localhost:8080/board/1/hits
+Content-Type: application/x-www-form-urlencoded
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-11T001633.500.json
+
+###
+
+POST http://localhost:8080/board
+Content-Type: application/json
+Content-Length: 144
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-11T001614.201.json
+
+###
+
