@@ -26,6 +26,27 @@ public class BoardService {private final BoardRepository boardRepository;
 
     public void boardHits(Long boardID){
         Board board=boardRepository.findById(boardID)
- .orElseThrow(()->new BoardNotFoundException("공지사항 글 없음"));
-        board.setHits(board.getHits()+1);
-    boardRepository.save(board);}}//[3]
+ .orElseThrow(()->new BoardNotFoundException("게시판 글 없음"));
+        board.setHits(board.getHits()+1);boardRepository.save(board);}
+
+    public void boardLikes(Long boardID){
+        Board board=boardRepository.findById(boardID)
+.orElseThrow(()->new BoardNotFoundException("게시판 글 없음"));
+        board.setLikes(board.getLikes()+1);boardRepository.save(board);}
+
+    public void cancelBoardLikes(Long boardID){
+        Board board=boardRepository.findById(boardID)
+                .orElseThrow(()->new BoardNotFoundException("게시판 글 없음"));
+        long likes=board.getLikes();if(likes<=0) {likes=0L;}
+        else{board.setLikes(likes-1);}boardRepository.save(board);}
+
+    public Board review(Long boardID, BoardRegister boardRegister){
+        Board saved=boardRepository.findById(boardID)
+                .orElseThrow(()->new RuntimeException("게시판 글 없음"));
+        saved.review(boardRegister);return saved;}
+
+    public Board reply(Long boardID, BoardRegister boardRegister){
+        Board saved=boardRepository.findById(boardID)
+                .orElseThrow(()->new RuntimeException("게시판 글 없음"));
+        saved.reply(boardRegister);return saved;}
+} //[3]

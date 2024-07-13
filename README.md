@@ -44,9 +44,14 @@
 
 ## 출처
 [1] 미상, 제로베이스+Intellij, “sample-95-100-solve”, 미상, 미상
+
 [2]mtgv999, IntelliJ, “Ecommerce”, 미상, 2024.05.19(Board CRUD)
+
 [3] ChatGPT, response to “클래스 NoticeController @PatchMapping("/api/board/{id}/hits") public void boardHits
 (@PathVariable Long id) { Notice board = boardRepository.findById(id) .orElseThrow(() -> new BoardNotFundException
 ("공지사항의 글이 존재하지 않습니다.")); board.setHits(board.getHits() + 1); boardRepository.save(board);}를 기반으로 NoticeService,
 NoticeRepository를 어떻게 작성해야 글을 1번 누를 때마다 조회수가 1씩 올라가나요?”, “위 코드의 BoardController 클래스에서 어떻게 해야
-boardRepository 부분을 boardService로 고칠 수 있습니까?” , July 10, 2024, https:chat.openai.com
+boardRepository 부분을 boardService로 고칠 수 있습니까?” , 2024년 7월 10일 KST, https:chat.openai.com
+
+[4] ChatGPT, response to "@GetMapping("/get/{boardID}")를 괄호 안에 (name=" ") 형식으로 고치려면 어떻게 해야 됩니까?",
+2024년 7월 13일 08:30 KST, https:chat.openai.com

@@ -30,7 +30,8 @@ public class BoardController {
         if(board!=null){return ResponseEntity.ok(board);
         } else {return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);}}
 
-    @RequestMapping(value = "/update/{boardID}",method = RequestMethod.PUT,name = "updateBoard")
+    @RequestMapping(value = "/update/{boardID}",
+            method = RequestMethod.PUT,name = "updateBoard")
     public ResponseEntity<Board> updateBoard(@PathVariable("boardID") Long boardID,
                                              @RequestBody BoardRegister boardRegister){
         try {Board updateBoard=boardService.updateBoard(boardID,boardRegister);
@@ -46,4 +47,27 @@ public class BoardController {
     @RequestMapping(value = "/{boardID}/hits",
             method = RequestMethod.PUT,name = "boardHits")
     public void boardHits(@PathVariable("boardID") Long boardID){
-        boardService.boardHits(boardID);}}//[3]
+        boardService.boardHits(boardID);}
+
+    @RequestMapping(value = "{boardID}/likes",
+    method = RequestMethod.PUT, name="boardLikes")
+    public void boardLikes(@PathVariable("boardID") Long boardID){
+        boardService.boardLikes(boardID);}
+
+    @RequestMapping(value = "{boardID}/cancelLikes",
+    method = RequestMethod.PUT, name="cancelBoardLikes")
+    public void cancelBoardLikes(@PathVariable("boardID") Long boardID){
+        boardService.cancelBoardLikes(boardID);}
+
+    @RequestMapping(value = "/{boardID}/review",
+            method = RequestMethod.PUT,name = "review")
+    public ResponseEntity<Board> review(@PathVariable("boardID") Long boardID,
+                                       @RequestBody BoardRegister boardRegister){
+       return ResponseEntity.ok(boardService.review(boardID,boardRegister));}
+
+    @RequestMapping(value = "/{boardID}/reply",
+            method = RequestMethod.PUT,name = "updateBoard")
+public ResponseEntity<Board> reply(@PathVariable("boardID") Long boardID,
+@RequestBody BoardRegister boardRegister){
+       return ResponseEntity.ok(boardService.reply(boardID,boardRegister));}
+}//[3][4]
