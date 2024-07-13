@@ -18,12 +18,6 @@ public class BoardController {
         catch(DuplicationNameException e){
             return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}
 
-    /* @GetMapping("/get/{boardID}")
-    public ResponseEntity<Board> getBoard(@PathVariable Long boardID){
-        Board board=boardService.getBoard(boardID);
-        if(board!=null){return ResponseEntity.ok(board);
-        } else {return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);}}*/
-
     @RequestMapping(value = "/get/{boardID}",method = RequestMethod.GET,name = "getBoard")
     public ResponseEntity<Board> getBoard(@PathVariable("boardID") Long boardID){
         Board board=boardService.getBoard(boardID);
@@ -70,4 +64,4 @@ public class BoardController {
 public ResponseEntity<Board> reply(@PathVariable("boardID") Long boardID,
 @RequestBody BoardRegister boardRegister){
        return ResponseEntity.ok(boardService.reply(boardID,boardRegister));}
-}//[3][4]
+}//[3][4][5]

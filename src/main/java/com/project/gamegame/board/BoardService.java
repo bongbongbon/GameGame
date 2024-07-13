@@ -2,7 +2,6 @@ package com.project.gamegame.board;
 import com.project.gamegame.common.exception.DuplicationNameException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 @Service
 @Transactional

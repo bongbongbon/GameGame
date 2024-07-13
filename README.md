@@ -55,3 +55,5 @@ boardRepository 부분을 boardService로 고칠 수 있습니까?” , 2024년 
 
 [4] ChatGPT, response to "@GetMapping("/get/{boardID}")를 괄호 안에 (name=" ") 형식으로 고치려면 어떻게 해야 됩니까?",
 2024년 7월 13일 08:30 KST, https:chat.openai.com
+
+[5] mgcztech576, Github, ecommercemain, https://github.com/mgcztech576/ecommercemain, 2023.10.16
