@@ -70,4 +70,7 @@ public class BoardController {
 public ResponseEntity<Board> reply(@PathVariable("boardID") Long boardID,
 @RequestBody BoardRegister boardRegister){
        return ResponseEntity.ok(boardService.reply(boardID,boardRegister));}
-}//[3][4][5]
+
+    @RequestMapping("/all")
+    public ResponseEntity<?> getAllBoardWritings(){
+        return ResponseEntity.ok(boardService.getAllBoardWritings());}}//[3][4][5]
