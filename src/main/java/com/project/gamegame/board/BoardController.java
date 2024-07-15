@@ -10,16 +10,18 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 
 public class BoardController {
+
     private final BoardService boardService;
+
     @PostMapping("/make")
     public ResponseEntity<?> makeBoard(@RequestBody BoardRegister boardRegister){
         try{Board board=boardService.makeBoard(boardRegister);
             return ResponseEntity.status(HttpStatus.CREATED).body(board);}
         catch(DuplicationNameException e){
             return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}
+    @GetMapping("/get/{boardID}")
+    public ResponseEntity<Board> getBoard(@PathVariable(name = "boardID") Long boardID){
 
-    @RequestMapping(value = "/get/{boardID}",method = RequestMethod.GET,name = "getBoard")
-    public ResponseEntity<Board> getBoard(@PathVariable("boardID") Long boardID){
         Board board=boardService.getBoard(boardID);
         if(board!=null){return ResponseEntity.ok(board);
         } else {return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);}}
