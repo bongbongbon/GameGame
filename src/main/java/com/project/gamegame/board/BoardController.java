@@ -84,7 +84,8 @@ public class BoardController {
         return ResponseEntity.ok(boardService.reply(boardID, boardRegister));
     }
 
-//    @RequestMapping("/all")
-//    public ResponseEntity<?> getAllBoardWritings(){
-//        return ResponseEntity.ok(boardService.getAllBoardWritings());}}//[3][4][5]
+    @RequestMapping("/all")
+    public ResponseEntity<?> getAllBoardWritings(){
+        return ResponseEntity.ok(boardService.getAllBoardWritings());
+    }//[3][4][5]
 }

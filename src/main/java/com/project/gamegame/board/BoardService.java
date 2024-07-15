@@ -74,6 +74,7 @@ public class BoardService {
         return saved;
     }
 
-//    public List<?> getAllBoardWritings(){
-//        return BoardRegister.getAll(boardRepository.findAll());}} //[3]
+    public List<BoardResponse> getAllBoardWritings(){
+        return BoardResponse.fromEntity(boardRepository.findAll());
+        }
 }

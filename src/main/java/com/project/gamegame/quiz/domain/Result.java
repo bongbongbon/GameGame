@@ -24,5 +24,5 @@ public class Result {
     @JoinColumn(name = "section_id")
     private Section section;
 
-    private int score;
+    private String correct;
 }
