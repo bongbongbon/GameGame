@@ -10,7 +10,6 @@ import lombok.*;
 @AllArgsConstructor
 public class SubjectiveQuestionRequest {
 
-    private String text;
+    private String title;
     private String correctAnswer;
-    private Long sectionId;
 }

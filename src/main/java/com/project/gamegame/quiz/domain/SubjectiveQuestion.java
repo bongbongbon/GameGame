@@ -7,11 +7,21 @@ import lombok.experimental.SuperBuilder;
 
 @Entity
 @SuperBuilder
-@DiscriminatorValue("SUBJECTIVE")
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SubjectiveQuestion extends Question{
+public class SubjectiveQuestion{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String title;
 
     private String correctAnswer;
+
+    @ManyToOne
+    @JoinColumn(name = "section_id")
+    private Section section;
 }

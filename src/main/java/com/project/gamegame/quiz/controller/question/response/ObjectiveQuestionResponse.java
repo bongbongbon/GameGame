@@ -6,6 +6,7 @@ import com.project.gamegame.quiz.domain.Section;
 import lombok.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -15,18 +16,22 @@ import java.util.List;
 public class ObjectiveQuestionResponse {
 
     private Long id;
-    private String text;
+    private String title;
     private List<String> options;
     private String correctAnswer;
-    private Long sectionId;
 
     public static ObjectiveQuestionResponse fromEntity(ObjectiveQuestion objectiveQuestion) {
         return ObjectiveQuestionResponse.builder()
                 .id(objectiveQuestion.getId())
-                .text(objectiveQuestion.getText())
+                .title(objectiveQuestion.getTitle())
                 .options(objectiveQuestion.getOptions())
                 .correctAnswer(objectiveQuestion.getCorrectAnswer())
-                .sectionId(objectiveQuestion.getSection().getId())
                 .build();
+    }
+
+    public static List<ObjectiveQuestionResponse> fromEntity(List<ObjectiveQuestion> objectiveQuestionList) {
+        return objectiveQuestionList.stream()
+                .map(ObjectiveQuestionResponse::fromEntity)
+                .collect(Collectors.toList());
     }
 }

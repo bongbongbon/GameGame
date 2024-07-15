@@ -2,7 +2,6 @@ package com.project.gamegame.quiz.controller.Section;
 
 import com.project.gamegame.quiz.controller.Section.request.SectionRequest;
 import com.project.gamegame.quiz.controller.Section.response.SectionResponse;
-import com.project.gamegame.quiz.domain.Section;
 import com.project.gamegame.quiz.service.SectionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -25,14 +24,16 @@ public class SectionController {
 
 
     @GetMapping
-    public ResponseEntity<List<Section>> getAllSections() {
+    public ResponseEntity<List<SectionResponse>> getAllSections() {
         return ResponseEntity.ok(sectionService.getAllSections());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Section> getSection(@PathVariable Long id) {
+    public ResponseEntity<SectionResponse> getSection(@PathVariable(name = "id") Long id) {
+
         return ResponseEntity.ok(sectionService.getSection(id));
     }
+
 
 
 }

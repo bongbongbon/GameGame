@@ -33,6 +33,8 @@ public class BoardRegister {
                 .hits(boardRegister.getHits())
                 .likes(boardRegister.getLikes()).build();}
 
-    public static List<?> getAll(List<Board> boardlist){
-        return boardlist.stream().map(Board::boardForm)
-                .collect(Collectors.toList());}}
+//    public static List<?> getAll(List<Board> boardlist){
+//        return boardlist.stream()
+//                .map(Board::boardForm)
+//                .collect(Collectors.toList());}
+}

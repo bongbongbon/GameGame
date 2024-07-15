@@ -11,8 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ObjectiveQuestionRequest {
 
-    private String text;
+    private String title;
     private List<String> options;
     private String correctAnswer;
-    private Long sectionId;
 }

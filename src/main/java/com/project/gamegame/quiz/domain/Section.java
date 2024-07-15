@@ -17,10 +17,14 @@ public class Section {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
 
     @OneToMany(mappedBy = "section", cascade = CascadeType.ALL)
-    private List<Question> questions = new ArrayList<>();
+    private List<ObjectiveQuestion> objectiveQuestionList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "section", cascade = CascadeType.ALL)
+    private List<SubjectiveQuestion> subjectiveQuestionList = new ArrayList<>();
 
 
 }
