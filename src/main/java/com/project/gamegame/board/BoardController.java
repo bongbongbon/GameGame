@@ -13,31 +13,57 @@ public class BoardController {
 
     private final BoardService boardService;
 
-    @PostMapping
+    @PostMapping("/make")
     public ResponseEntity<?> makeBoard(@RequestBody BoardRegister boardRegister){
         try{Board board=boardService.makeBoard(boardRegister);
             return ResponseEntity.status(HttpStatus.CREATED).body(board);}
         catch(DuplicationNameException e){
             return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}
-
     @GetMapping("/get/{boardID}")
     public ResponseEntity<Board> getBoard(@PathVariable(name = "boardID") Long boardID){
+
         Board board=boardService.getBoard(boardID);
         if(board!=null){return ResponseEntity.ok(board);
         } else {return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);}}
 
-    @PutMapping("/update/{boardID}")
-    public ResponseEntity<Board> updateBoard(@PathVariable Long boardID,
+    @RequestMapping(value = "/update/{boardID}",
+            method = RequestMethod.PUT,name = "updateBoard")
+    public ResponseEntity<Board> updateBoard(@PathVariable("boardID") Long boardID,
                                              @RequestBody BoardRegister boardRegister){
         try {Board updateBoard=boardService.updateBoard(boardID,boardRegister);
             return ResponseEntity.ok(updateBoard);}
         catch (Exception e){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);}}
 
-    @DeleteMapping("/delete/{boardID}")
-    public void deleteBoard(@PathVariable Long boardID){
+    @RequestMapping(value = "/delete/{boardID}",
+            method = RequestMethod.DELETE,name = "deleteBoard")
+    public void deleteBoard(@PathVariable("boardID") Long boardID){
         boardService.deleteBoard(boardID);}
 
-    @PatchMapping("/{boardID}/hits")
-    public void boardHits(@PathVariable Long boardID){
-        boardService.boardHits(boardID);}}//[3]
+    @RequestMapping(value = "/{boardID}/hits",
+            method = RequestMethod.PUT,name = "boardHits")
+    public void boardHits(@PathVariable("boardID") Long boardID){
+        boardService.boardHits(boardID);}
+
+    @RequestMapping(value = "{boardID}/likes",
+    method = RequestMethod.PUT, name="boardLikes")
+    public void boardLikes(@PathVariable("boardID") Long boardID){
+        boardService.boardLikes(boardID);}
+
+    @RequestMapping(value = "{boardID}/cancelLikes",
+    method = RequestMethod.PUT, name="cancelBoardLikes")
+    public void cancelBoardLikes(@PathVariable("boardID") Long boardID){
+        boardService.cancelBoardLikes(boardID);}
+
+    @RequestMapping(value = "/{boardID}/review",
+            method = RequestMethod.PUT,name = "review")
+    public ResponseEntity<Board> review(@PathVariable("boardID") Long boardID,
+                                       @RequestBody BoardRegister boardRegister){
+       return ResponseEntity.ok(boardService.review(boardID,boardRegister));}
+
+    @RequestMapping(value = "/{boardID}/reply",
+            method = RequestMethod.PUT,name = "updateBoard")
+public ResponseEntity<Board> reply(@PathVariable("boardID") Long boardID,
+@RequestBody BoardRegister boardRegister){
+       return ResponseEntity.ok(boardService.reply(boardID,boardRegister));}
+}//[3][4][5]
