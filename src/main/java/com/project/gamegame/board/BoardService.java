@@ -3,6 +3,9 @@ import com.project.gamegame.common.exception.DuplicationNameException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+
 @Service
 @Transactional
 @RequiredArgsConstructor
@@ -48,4 +51,6 @@ public class BoardService {private final BoardRepository boardRepository;
         Board saved=boardRepository.findById(boardID)
                 .orElseThrow(()->new RuntimeException("게시판 글 없음"));
         saved.reply(boardRegister);return saved;}
-} //[3]
+
+    public List<?> getAllBoardWritings(){
+        return BoardRegister.getAll(boardRepository.findAll());}} //[3]
