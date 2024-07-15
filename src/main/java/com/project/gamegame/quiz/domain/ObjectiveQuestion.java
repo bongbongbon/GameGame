@@ -1,31 +1,22 @@
 package com.project.gamegame.quiz.domain;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
-@Setter
-@Builder
 @Entity
+@SuperBuilder
+@DiscriminatorValue("OBJECTIVE")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ObjectiveQuestion {
-
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String question;
-
-    private List<String> options = new ArrayList<>();
+public class ObjectiveQuestion extends Question {
+    @ElementCollection
+    private List<String> options;
 
     private String correctAnswer;
 }

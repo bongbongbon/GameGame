@@ -1,25 +1,17 @@
 package com.project.gamegame.quiz.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 
-@Getter
-@Setter
-@Builder
 @Entity
+@SuperBuilder
+@DiscriminatorValue("SUBJECTIVE")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SubjectiveQuestion {
+public class SubjectiveQuestion extends Question{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String question;
-
-    private String answer;
+    private String correctAnswer;
 }

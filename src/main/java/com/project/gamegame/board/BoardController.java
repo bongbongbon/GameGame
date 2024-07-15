@@ -18,13 +18,17 @@ public class BoardController {
         try{Board board=boardService.makeBoard(boardRegister);
             return ResponseEntity.status(HttpStatus.CREATED).body(board);}
         catch(DuplicationNameException e){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}
+    }
+
     @GetMapping("/get/{boardID}")
     public ResponseEntity<Board> getBoard(@PathVariable(name = "boardID") Long boardID){
 
         Board board=boardService.getBoard(boardID);
         if(board!=null){return ResponseEntity.ok(board);
-        } else {return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);}}
+        } else {return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+    }
 
     @RequestMapping(value = "/update/{boardID}",
             method = RequestMethod.PUT,name = "updateBoard")
