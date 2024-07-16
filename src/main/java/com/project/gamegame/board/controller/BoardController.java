@@ -1,4 +1,7 @@
-package com.project.gamegame.board;
+package com.project.gamegame.board.controller;
+import com.project.gamegame.board.service.BoardService;
+import com.project.gamegame.board.domain.Board;
+import com.project.gamegame.board.domain.BoardRegister;
 import com.project.gamegame.common.exception.DuplicationNameException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
