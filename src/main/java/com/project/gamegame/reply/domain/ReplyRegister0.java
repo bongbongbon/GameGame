@@ -7,14 +7,14 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ReplyRegister {
+public class ReplyRegister0 {
     private Long userID;
     private Long boardID;
     private String content;
     private String reReply;
 
-    public static Reply replyForm(ReplyRegister replyRegister){
-        return Reply.builder().userID(replyRegister.getUserID())
+    public static Reply0 replyForm(ReplyRegister0 replyRegister){
+        return Reply0.builder().userID(replyRegister.getUserID())
                 .boardID(replyRegister.getBoardID())
                 .content(replyRegister.getContent())
                 .reReply(replyRegister.getReReply()).build();}}
