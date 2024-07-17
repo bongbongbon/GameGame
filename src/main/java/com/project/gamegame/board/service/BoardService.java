@@ -1,4 +1,9 @@
-package com.project.gamegame.board;
+package com.project.gamegame.board.service;
+import com.project.gamegame.board.dto.BoardResponse;
+import com.project.gamegame.board.domain.Board;
+import com.project.gamegame.board.domain.BoardRegister;
+import com.project.gamegame.common.exception.NotFoundException;
+import com.project.gamegame.board.repostiory.BoardRepository;
 import com.project.gamegame.common.exception.DuplicationNameException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -36,21 +41,21 @@ public class BoardService {
 
     public void boardHits(Long boardID) {
         Board board = boardRepository.findById(boardID)
-                .orElseThrow(() -> new BoardNotFoundException("게시판 글 없음"));
+                .orElseThrow(() -> new NotFoundException("게시판 글 없음"));
         board.setHits(board.getHits() + 1);
         boardRepository.save(board);
     }
 
     public void boardLikes(Long boardID) {
         Board board = boardRepository.findById(boardID)
-                .orElseThrow(() -> new BoardNotFoundException("게시판 글 없음"));
+                .orElseThrow(() -> new NotFoundException("게시판 글 없음"));
         board.setLikes(board.getLikes() + 1);
         boardRepository.save(board);
     }
 
     public void cancelBoardLikes(Long boardID) {
         Board board = boardRepository.findById(boardID)
-                .orElseThrow(() -> new BoardNotFoundException("게시판 글 없음"));
+                .orElseThrow(() -> new NotFoundException("게시판 글 없음"));
         long likes = board.getLikes();
         if (likes <= 0) {
             likes = 0L;

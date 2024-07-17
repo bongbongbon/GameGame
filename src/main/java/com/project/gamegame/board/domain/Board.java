@@ -1,4 +1,4 @@
-package com.project.gamegame.board;
+package com.project.gamegame.board.domain;
 import com.project.gamegame.common.model.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;

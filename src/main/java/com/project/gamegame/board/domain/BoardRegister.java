@@ -1,8 +1,5 @@
-package com.project.gamegame.board;
+package com.project.gamegame.board.domain;
 import lombok.*;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Getter
 @Setter

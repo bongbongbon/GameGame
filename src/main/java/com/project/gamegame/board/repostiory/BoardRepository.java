@@ -1,4 +1,5 @@
-package com.project.gamegame.board;
+package com.project.gamegame.board.repostiory;
+import com.project.gamegame.board.domain.Board;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 @Repository

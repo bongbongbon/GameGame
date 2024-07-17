@@ -1,8 +1,7 @@
-package com.project.gamegame.board;
+package com.project.gamegame.board.dto;
 
 
-import com.project.gamegame.quiz.controller.question.response.SubjectiveQuestionResponse;
-import com.project.gamegame.quiz.domain.SubjectiveQuestion;
+import com.project.gamegame.board.domain.Board;
 import lombok.*;
 
 import java.util.List;
