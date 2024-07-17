@@ -12,7 +12,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-public class Reply0 extends BaseEntity {@Id
+public class Reply extends BaseEntity {@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long replyID;
     private Long userID;
@@ -20,7 +20,7 @@ public class Reply0 extends BaseEntity {@Id
     private String content;
     private String reReply;
 
-    public void replyUpdate(ReplyRegister0 replyRegister){
+    public void replyUpdate(ReplyRegister replyRegister){
         this.userID=replyRegister.getUserID();
         this.boardID=replyRegister.getBoardID();
         this.content=replyRegister.getContent();
