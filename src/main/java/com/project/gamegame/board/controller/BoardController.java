@@ -3,6 +3,7 @@ import com.project.gamegame.board.service.BoardService;
 import com.project.gamegame.board.domain.Board;
 import com.project.gamegame.board.domain.BoardRegister;
 import com.project.gamegame.common.exception.DuplicationNameException;
+import com.project.gamegame.common.response.ApiSuccessResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,13 +17,10 @@ public class BoardController {
     private final BoardService boardService;
 
     @PostMapping("/make")
-    public ResponseEntity<?> makeBoard(@RequestBody BoardRegister boardRegister) {
-        try {
-            Board board = boardService.makeBoard(boardRegister);
-            return ResponseEntity.status(HttpStatus.CREATED).body(board);
-        } catch (DuplicationNameException e) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
-        }
+    public ApiSuccessResponse<?> makeBoard(@RequestBody BoardRegister boardRegister) {
+
+
+        return ApiSuccessResponse.from(boardService.makeBoard(boardRegister));
     }
 
     @GetMapping("/get/{boardID}")
