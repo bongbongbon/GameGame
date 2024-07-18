@@ -2,6 +2,7 @@ package com.project.gamegame.board.service;
 import com.project.gamegame.board.dto.BoardResponse;
 import com.project.gamegame.board.domain.Board;
 import com.project.gamegame.board.domain.BoardRegister;
+import com.project.gamegame.common.exception.CustomException;
 import com.project.gamegame.common.exception.NotFoundException;
 import com.project.gamegame.board.repostiory.BoardRepository;
 import com.project.gamegame.common.exception.DuplicationNameException;
@@ -19,7 +20,7 @@ public class BoardService {
 
     public Board makeBoard(BoardRegister boardRegister) {
         if (boardRepository.existsByBoardName(boardRegister.getBoardName())) {
-            throw new DuplicationNameException("게시판 이름 이미 있음");
+            throw CustomException.BOARD_NOT_FOUND;
         }
         return boardRepository.save(BoardRegister.boardForm(boardRegister));
     }

@@ -13,6 +13,7 @@ public class CustomException extends RuntimeException{
     public static final CustomException SUBJECTIVE_QUESTION_NOT_FOUㅌND = new CustomException(ErrorCode.SUBJECTIVE_QUESTION_NOT_FOUND);
     public static final CustomException OBJECTIVE_QUESTION_NOT_FOUND = new CustomException(ErrorCode.OBJECTIVE_QUESTION_NOT_FOUND);
     public static final CustomException SECTION_NOT_FOUND = new CustomException(ErrorCode.SECTION_NOT_FOUND);
+    public static final CustomException BOARD_NOT_FOUND = new CustomException(ErrorCode.BOARD_NOT_FOUND);
 
 
 
