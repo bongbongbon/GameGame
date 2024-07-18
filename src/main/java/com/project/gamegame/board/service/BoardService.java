@@ -26,7 +26,8 @@ public class BoardService {
     }
 
     public Board getBoard(Long boardID) {
-        return boardRepository.findById(boardID).orElse(null);
+        return boardRepository.findById(boardID)
+                .orElseThrow(() -> CustomException.BOARD_NOT_FOUND);
     }
 
     public Board updateBoard(Long boardID, BoardRegister boardRegister) {

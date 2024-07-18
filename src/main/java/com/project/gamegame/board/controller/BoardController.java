@@ -18,20 +18,12 @@ public class BoardController {
 
     @PostMapping("/make")
     public ApiSuccessResponse<?> makeBoard(@RequestBody BoardRegister boardRegister) {
-
-
         return ApiSuccessResponse.from(boardService.makeBoard(boardRegister));
     }
 
     @GetMapping("/get/{boardID}")
-    public ResponseEntity<Board> getBoard(@PathVariable(name = "boardID") Long boardID) {
-
-        Board board = boardService.getBoard(boardID);
-        if (board != null) {
-            return ResponseEntity.ok(board);
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        }
+    public ApiSuccessResponse<Board> getBoard(@PathVariable(name = "boardID") Long boardID) {
+        return ApiSuccessResponse.from(boardService.getBoard(boardID));
     }
 
     @RequestMapping(value = "/update/{boardID}",
