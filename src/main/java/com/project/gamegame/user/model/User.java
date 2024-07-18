@@ -15,8 +15,9 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Builder
 @Table(name = "users")
-
 public class User {
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
