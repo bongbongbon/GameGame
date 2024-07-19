@@ -17,10 +17,7 @@ public class BoardResponse {
     private String userName;//1]
     private String title;//[1]
     private String contents;//[1]
-    private String views;//[1]
 
-    private String review="";
-    private String reply="";
     private Long hits;//[1]
     private Long likes;//[1]
 
@@ -30,18 +27,11 @@ public class BoardResponse {
                 .userName(board.getUserName())
                 .title(board.getTitle())
                 .contents(board.getContents())
-                .views(board.getViews())
-                .review(board.getReview())
-                .reply(board.getReply())
+
                 .hits(board.getHits())
-                .likes(board.getLikes())
-                .build();
-    }
+                .likes(board.getLikes()).build();}
 
     public static List<BoardResponse> fromEntity(List<Board> boardList){
         return boardList.stream()
                 .map(BoardResponse::fromEntity)
-                .collect(Collectors.toList());
-    }
-
-}
+                .collect(Collectors.toList());}}

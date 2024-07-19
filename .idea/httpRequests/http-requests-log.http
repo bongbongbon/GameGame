@@ -1,227 +1,216 @@
-PUT http://localhost:8080/board/1/reply
+POST http://localhost:8080/board/make
 Content-Type: application/json
-Content-Length: 159
+Content-Length: 100
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{"boardName": "cccc",
-  "userName": "aaaa",
-  "title": "lll",
-  "contents": "mmm",
-  "views": "",
-  "review": "",
-  "reply": "abcd",
+{
+  "boardName": "6",
+  "userName": "",
+  "title": "",
+  "contents": "",
   "hits": 0,
-  "likes": 0}
+  "likes": 0
+}
 
-<> 2024-07-13T123232.200.json
-
-###
-
-PUT http://localhost:8080/board/1/review
-Content-Type: application/json
-Content-Length: 155
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "dddd",
-  "userName": "eee",
-  "title": "ggg",
-  "contents": "hhh",
-  "views": "",
-  "review": "e",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T123138.200.json
+<> 2024-07-19T200009.200.json
 
 ###
 
 POST http://localhost:8080/board/make
 Content-Type: application/json
-Content-Length: 143
+Content-Length: 100
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{"boardName": "13",
+{
+  "boardName": "5",
   "userName": "",
   "title": "",
   "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
   "hits": 0,
-  "likes": 0}
+  "likes": 0
+}
 
-<> 2024-07-13T123112.201.json
+<> 2024-07-19T200008.200.json
 
 ###
 
 POST http://localhost:8080/board/make
 Content-Type: application/json
-Content-Length: 143
+Content-Length: 100
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{"boardName": "12",
+{
+  "boardName": "4",
   "userName": "",
   "title": "",
   "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
   "hits": 0,
-  "likes": 0}
+  "likes": 0
+}
 
-<> 2024-07-13T123106.201.json
+<> 2024-07-19T200006.200.json
 
 ###
 
 POST http://localhost:8080/board/make
 Content-Type: application/json
-Content-Length: 143
+Content-Length: 99
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{"boardName": "11",
+{
+  "boardName": "",
   "userName": "",
   "title": "",
   "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
   "hits": 0,
-  "likes": 0}
+  "likes": 0
+}
 
-<> 2024-07-13T123100.201.json
-
-###
-
-PUT http://localhost:8080/board/1/review
-Content-Type: application/json
-Content-Length: 155
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "dddd",
-  "userName": "eee",
-  "title": "ggg",
-  "contents": "hhh",
-  "views": "",
-  "review": "e",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T122946.200.json
-
-###
-
-PUT http://localhost:8080/board/1/review
-Content-Type: application/json
-Content-Length: 146
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "eeeee",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T122921.200.json
+<> 2024-07-19T200004.400.json
 
 ###
 
 POST http://localhost:8080/board/make
 Content-Type: application/json
-Content-Length: 143
+Content-Length: 100
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{"boardName": "18",
+{
+  "boardName": "3",
   "userName": "",
   "title": "",
   "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
   "hits": 0,
-  "likes": 0}
+  "likes": 0
+}
 
-<> 2024-07-13T122912.201.json
+<> 2024-07-19T195955.200.json
 
 ###
 
 POST http://localhost:8080/board/make
 Content-Type: application/json
-Content-Length: 143
+Content-Length: 100
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{"boardName": "17",
+{
+  "boardName": "2",
   "userName": "",
   "title": "",
   "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
   "hits": 0,
-  "likes": 0}
+  "likes": 0
+}
 
-<> 2024-07-13T122909.201.json
+<> 2024-07-19T195954.200.json
 
 ###
 
 POST http://localhost:8080/board/make
 Content-Type: application/json
-Content-Length: 143
+Content-Length: 100
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-{"boardName": "16",
+{
+  "boardName": "1",
   "userName": "",
   "title": "",
   "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
   "hits": 0,
-  "likes": 0}
+  "likes": 0
+}
 
-<> 2024-07-13T122857.201.json
+<> 2024-07-19T195952.200.json
 
 ###
 
-PUT http://localhost:8080/board/1/review
+POST http://localhost:8080/board/make
 Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "hits": 0,
+  "likes": 0
+}
+
+<> 2024-07-19T195950.400.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "hits": 0,
+  "likes": 0
+}
+
+<> 2024-07-19T195943.200.json
+
+###
+
+POST http://localhost:8080/board/make
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 content-length: 0
 
-<> 2024-07-13T122658.500.json
+<> 2024-07-19T195844.500.json
 
 ###
 
-PUT http://localhost:8080/board/1/review
+POST http://localhost:8080/board/make
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-19T195750.500.json
+
+###
+
+POST http://localhost:8080/board/make
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-19T195654.500.json
+
+###
+
+POST http://localhost:8080/board/make
 Content-Type: application/json
-Content-Length: 150
+Content-Length: 114
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
@@ -232,426 +221,112 @@ Accept: */*
   "title": "",
   "contents": "",
   "views": "",
-  "review": "eeeee",
-  "reply": "",
   "hits": 0,
   "likes": 0
 }
 
-<> 2024-07-13T122618.200.json
+<> 2024-07-19T195513.200.json
 
 ###
 
 POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 143
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
+content-length: 0
 
-{"boardName": "16",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T122533.201.json
+<> 2024-07-19T195504.500.json
 
 ###
 
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 143
+GET http://localhost:8080/board/all
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
+content-length: 0
 
-{"boardName": "15",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T122532.201.json
+<> 2024-07-19T194127.200.json
 
 ###
 
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 143
+PUT http://localhost:8080/board/1/cancelLikes
+Content-Type: application/x-www-form-urlencoded
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-
-{"boardName": "14",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T122529.201.json
+content-length: 0
 
 ###
 
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 154
+PUT http://localhost:8080/board/1/cancelLikes
+Content-Type: application/x-www-form-urlencoded
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-
-{"boardName": "14",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "22222",
-  "reply": "111111",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T122438.201.json
+content-length: 0
 
 ###
 
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 154
+PUT http://localhost:8080/board/1/cancelLikes
+Content-Type: application/x-www-form-urlencoded
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-
-{"boardName": "13",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "22222",
-  "reply": "111111",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T122437.201.json
+content-length: 0
 
 ###
 
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 154
+PUT http://localhost:8080/board/1/cancelLikes
+Content-Type: application/x-www-form-urlencoded
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-
-{"boardName": "12",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "22222",
-  "reply": "111111",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T122431.201.json
+content-length: 0
 
 ###
 
-PUT http://localhost:8080/board/1/review
+PUT http://localhost:8080/board/1/likes
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 content-length: 0
 
-<> 2024-07-13T122150.500.json
-
 ###
 
-PUT http://localhost:8080/board/1/reply
-Content-Type: application/json
-Content-Length: 152
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "boardName": "",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "ddddddd",
-  "hits": 0,
-  "likes": 0
-}
-
-<> 2024-07-13T122139.500.json
-
-###
-
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 154
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "12",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "22222",
-  "reply": "111111",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T121936.201.json
-
-###
-
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 154
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "11",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "22222",
-  "reply": "111111",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T121934.201.json
-
-###
-
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 154
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "10",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "22222",
-  "reply": "111111",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T121930.201.json
-
-###
-
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 154
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "10",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "22222",
-  "reply": "111111",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T121854.201.json
-
-###
-
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 149
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "10",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "111111",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T120822.201.json
-
-###
-
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 149
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "10",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "111111",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T120651.201.json
-
-###
-
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 142
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "9",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T120641.201.json
-
-###
-
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 142
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "8",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T120639.201.json
-
-###
-
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 142
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "7",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T120634.201.json
-
-###
-
-PUT http://localhost:8080/board/reply/1
+PUT http://localhost:8080/board/1/likes
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 content-length: 0
 
-<> 2024-07-13T120520.500.json
-
 ###
 
-PUT http://localhost:8080/board/reply/1
+PUT http://localhost:8080/board/1/hits
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 content-length: 0
 
-<> 2024-07-13T120502.500.json
-
 ###
 
-POST http://localhost:8080/board/make
+PUT http://localhost:8080/board/1/hits
 Content-Type: application/json
-Content-Length: 142
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-
-{"boardName": "7",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T120444.201.json
+content-length: 0
 
 ###
 
-POST http://localhost:8080/board/make
+PUT http://localhost:8080/board/1/hits
 Content-Type: application/json
-Content-Length: 142
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-
-{"boardName": "6",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T120443.201.json
+content-length: 0
 
 ###
 
@@ -672,7 +347,284 @@ Accept: */*
   "hits": 0,
   "likes": 0}
 
-<> 2024-07-13T120442.201.json
+<> 2024-07-19T193952.200.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{"boardName": "1",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-19T193947.400.json
+
+###
+
+PUT http://localhost:8080/board/update/1
+Content-Type: application/json
+Content-Length: 146
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "1",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0
+}
+
+<> 2024-07-19T193941.200.json
+
+###
+
+PUT http://localhost:8080/board/update/6
+Content-Type: application/json
+Content-Length: 146
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "6",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0
+}
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{"boardName": "9",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-19T193929.200.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{"boardName": "8",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-19T193928.200.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{"boardName": "7",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-19T193927.200.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{"boardName": "6",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-19T193924.200.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{"boardName": "5",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-19T193919.400.json
+
+###
+
+PUT http://localhost:8080/board/update/6
+Content-Type: application/json
+Content-Length: 146
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "6",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0
+}
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{"boardName": "5",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-19T193901.200.json
+
+###
+
+PUT http://localhost:8080/board/update/6
+Content-Type: application/json
+Content-Length: 146
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "6",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0
+}
+
+###
+
+PUT http://localhost:8080/board/update/1
+Content-Type: application/json
+Content-Length: 146
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "6",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0
+}
+
+<> 2024-07-19T193704.200.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 142
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{"boardName": "5",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0}
+
+<> 2024-07-19T193621.200.json
 
 ###
 
@@ -693,100 +645,7 @@ Accept: */*
   "hits": 0,
   "likes": 0}
 
-<> 2024-07-13T120438.201.json
-
-###
-
-PUT http://localhost:8080/board/2/cancelLikes
-Content-Type: application/x-www-form-urlencoded
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-PUT http://localhost:8080/board/2/cancelLikes
-Content-Type: application/x-www-form-urlencoded
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-PUT http://localhost:8080/board/2/cancelLikes
-Content-Type: application/x-www-form-urlencoded
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-PUT http://localhost:8080/board/2/cancelLikes
-Content-Type: application/x-www-form-urlencoded
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-PUT http://localhost:8080/board/2/cancelLikes
-Content-Type: application/x-www-form-urlencoded
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-PUT http://localhost:8080/board/2/likes
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-PUT http://localhost:8080/board/2/likes
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-PUT http://localhost:8080/board/2/hits
-Content-Type: application/x-www-form-urlencoded
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-POST http://localhost:8080/board/make
-Content-Type: application/json
-Content-Length: 142
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{"boardName": "4",
-  "userName": "",
-  "title": "",
-  "contents": "",
-  "views": "",
-  "review": "",
-  "reply": "",
-  "hits": 0,
-  "likes": 0}
-
-<> 2024-07-13T111634.201.json
+<> 2024-07-19T193620.200.json
 
 ###
 
@@ -807,7 +666,7 @@ Accept: */*
   "hits": 0,
   "likes": 0}
 
-<> 2024-07-13T111631.201.json
+<> 2024-07-19T193602.200.json
 
 ###
 
@@ -828,18 +687,155 @@ Accept: */*
   "hits": 0,
   "likes": 0}
 
-<> 2024-07-13T111628.409.txt
+<> 2024-07-19T193540.200.json
 
 ###
 
 POST http://localhost:8080/board/make
 Content-Type: application/json
-Content-Length: 142
+Content-Length: 146
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "2",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0
+}
+
+<> 2024-07-19T193326.200.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 146
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "1",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0
+}
+
+<> 2024-07-19T193323.200.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 145
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0
+}
+
+<> 2024-07-19T193314.400.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 145
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "boardName": "",
+  "userName": "",
+  "title": "",
+  "contents": "",
+  "views": "",
+  "review": "",
+  "reply": "",
+  "hits": 0,
+  "likes": 0
+}
+
+<> 2024-07-19T193237.200.json
+
+###
+
+GET http://localhost:8080/board/get/10
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-18T125225.400.json
+
+###
+
+GET http://localhost:8080/board/get/3
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-18T125214.200.json
+
+###
+
+GET http://localhost:8080/board/get/2
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-18T125212.200.json
+
+###
+
+GET http://localhost:8080/board/get/1
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-07-18T125209.200.json
+
+###
+
+POST http://localhost:8080/board/make
+Content-Type: application/json
+Content-Length: 145
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 {"boardName": "2",
+
   "userName": "",
   "title": "",
   "contents": "",
@@ -849,34 +845,7 @@ Accept: */*
   "hits": 0,
   "likes": 0}
 
-<> 2024-07-13T111624.201.json
-
-###
-
-PUT http://localhost:8080/board/2/hits
-Content-Type: application/x-www-form-urlencoded
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-PUT http://localhost:8080/board/2/hits
-Content-Type: application/x-www-form-urlencoded
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-PUT http://localhost:8080/board/2/hits
-Content-Type: application/x-www-form-urlencoded
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
+<> 2024-07-18T125117.200.json
 
 ###
 

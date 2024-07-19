@@ -11,10 +11,7 @@ public class BoardRegister {
     private String userName;//1]
     private String title;//[1]
     private String contents;//[1]
-    private String views;//[1]
 
-    private String review="";
-    private String reply="";
     private Long hits;//[1]
     private Long likes;//[1]
 
@@ -23,12 +20,6 @@ public class BoardRegister {
                 .userName(boardRegister.getUserName())
                 .title(boardRegister.getTitle())
                 .contents(boardRegister.getContents())
-                .views(boardRegister.getViews())
 
-                .review(boardRegister.getReview())
-                .reply(boardRegister.getReply())
                 .hits(boardRegister.getHits())
-                .likes(boardRegister.getLikes()).build();
-    }
-
-}
+                .likes(boardRegister.getLikes()).build();}}

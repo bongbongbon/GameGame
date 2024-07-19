@@ -1,10 +1,7 @@
 package com.project.gamegame.common.exception;
-
-
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-
 @Getter
 @RequiredArgsConstructor
 public enum ErrorCode {
@@ -15,13 +12,9 @@ public enum ErrorCode {
     SUBJECTIVE_QUESTION_NOT_FOUND(HttpStatus.BAD_REQUEST, "USER_NOT_FOUND", "존재하지 않는 주관식문제입니다."),
     OBJECTIVE_QUESTION_NOT_FOUND(HttpStatus.BAD_REQUEST, "USER_NOT_FOUND", "존재하지 않는 객관식문제입니다."),
     SECTION_NOT_FOUND(HttpStatus.BAD_REQUEST, "SECTION_NOT_FOUND", "존재하지 않는 섹션입니다."),
-    BOARD_NOT_FOUND(HttpStatus.BAD_REQUEST, "BOARD_NOT_FOUND", "존재하지 않는 게시판입니다.");
-
-
-
-
+    BOARD_NOT_FOUND(HttpStatus.BAD_REQUEST, "BOARD_NOT_FOUND", "존재하지 않는 게시판입니다."),
+    ALREADY_EXISTS(HttpStatus.BAD_REQUEST, "ALREADY_EXISTS","이미 같은 이름이 존재합니다.");
 
     private final HttpStatus httpStatus;
     private final String code;
-    private final String message;
-}
+    private final String message;}
