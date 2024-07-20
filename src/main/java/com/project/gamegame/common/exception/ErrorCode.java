@@ -13,7 +13,8 @@ public enum ErrorCode {
     OBJECTIVE_QUESTION_NOT_FOUND(HttpStatus.BAD_REQUEST, "USER_NOT_FOUND", "존재하지 않는 객관식문제입니다."),
     SECTION_NOT_FOUND(HttpStatus.BAD_REQUEST, "SECTION_NOT_FOUND", "존재하지 않는 섹션입니다."),
     BOARD_NOT_FOUND(HttpStatus.BAD_REQUEST, "BOARD_NOT_FOUND", "존재하지 않는 게시판입니다."),
-    ALREADY_EXISTS(HttpStatus.BAD_REQUEST, "ALREADY_EXISTS","이미 같은 이름이 존재합니다.");
+    ALREADY_EXISTS(HttpStatus.BAD_REQUEST, "ALREADY_EXISTS","이미 같은 이름이 존재합니다."),
+    QUIZ_NOT_FOUND(HttpStatus.BAD_REQUEST, "QUIZ_NOT_FOUND", "존재하지 않는 퀴즈입니다,");
 
     private final HttpStatus httpStatus;
     private final String code;

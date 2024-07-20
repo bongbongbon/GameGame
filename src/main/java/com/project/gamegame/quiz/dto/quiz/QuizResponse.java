@@ -17,7 +17,7 @@ public class QuizResponse {
 
     private Long id;
 
-    private String quizType;
+    private String category;
 
     private String title;
 
@@ -28,6 +28,7 @@ public class QuizResponse {
     public static QuizResponse fromEntity(Quiz quiz) {
         return QuizResponse.builder()
                 .id(quiz.getId())
+                .category(quiz.getCategory())
                 .title(quiz.getTitle())
                 .content(quiz.getContent())
                 .answer(quiz.getAnswer())

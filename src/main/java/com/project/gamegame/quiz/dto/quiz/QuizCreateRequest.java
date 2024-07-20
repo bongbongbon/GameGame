@@ -11,7 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 public class QuizCreateRequest {
 
-    private String quizType;
+    private String category;
 
     private String title;
 

@@ -12,6 +12,7 @@ public class CustomException extends RuntimeException{
     public static final CustomException SECTION_NOT_FOUND = new CustomException(ErrorCode.SECTION_NOT_FOUND);
     public static final CustomException BOARD_NOT_FOUND = new CustomException(ErrorCode.BOARD_NOT_FOUND);
     public static final CustomException ALREADY_EXISTS=new CustomException(ErrorCode.ALREADY_EXISTS);
+    public static final CustomException QUIZ_NOT_FOUND=new CustomException(ErrorCode.QUIZ_NOT_FOUND);
 
     private final ErrorCode errorCode;
     public HttpStatus getHttpStatus() {return errorCode.getHttpStatus();}}
