@@ -18,7 +18,7 @@ public class Quiz {
     @Column(name = "quiz_id")
     private Long id;
 
-    private QuizType quizType;
+    private String quizType;
 
     private String title;
 
