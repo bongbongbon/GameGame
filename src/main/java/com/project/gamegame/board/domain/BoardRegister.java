@@ -1,6 +1,5 @@
 package com.project.gamegame.board.domain;
 import lombok.*;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -11,7 +10,6 @@ public class BoardRegister {
     private String userName;//1]
     private String title;//[1]
     private String contents;//[1]
-
     private Long hits;//[1]
     private Long likes;//[1]
 
@@ -20,6 +18,5 @@ public class BoardRegister {
                 .userName(boardRegister.getUserName())
                 .title(boardRegister.getTitle())
                 .contents(boardRegister.getContents())
-
                 .hits(boardRegister.getHits())
                 .likes(boardRegister.getLikes()).build();}}

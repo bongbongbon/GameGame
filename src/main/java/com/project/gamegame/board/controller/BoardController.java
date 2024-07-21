@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/board")
 @RequiredArgsConstructor
 public class BoardController {
-
     private final BoardService boardService;
 
     @PostMapping("/make")
@@ -35,14 +34,12 @@ public class BoardController {
     @RequestMapping(value = "/delete/{boardID}",
             method = RequestMethod.DELETE, name = "deleteBoard")
     public void deleteBoard(@PathVariable("boardID") Long boardID) {
-        boardService.deleteBoard(boardID);
-    }
+        boardService.deleteBoard(boardID);}
 
     @RequestMapping(value = "/{boardID}/hits",
             method = RequestMethod.PUT, name = "boardHits")
     public void boardHits(@PathVariable("boardID") Long boardID) {
-        boardService.boardHits(boardID);
-    }
+        boardService.boardHits(boardID);}
 
     @RequestMapping(value = "{boardID}/likes",
             method = RequestMethod.PUT, name = "boardLikes")

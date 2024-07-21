@@ -43,7 +43,7 @@
 <img width="862" alt="스크린샷 2024-07-08 오후 9 12 41" src="https://github.com/bongbongbon/GameGame/assets/106155992/438a3a58-9350-4f29-84b2-b8536f8be6db">
 
 ## 출처
-[1] 미상, 제로베이스+Intellij, “sample-95-100-solve”, 미상, 미상
+[1] 미상, 제로베이스+Intellij, “sample-95-100-solve”, 미상, 미상 (Board, Reply, ReReply Entity/Register/Response 부분)
 
 [2]mtgv999, IntelliJ, “Ecommerce”, 미상, 2024.05.19(Board CRUD)
 

@@ -1,4 +1,4 @@
-package com.project.gamegame.reply.domain;
+package com.project.gamegame.reReply.domain;
 import com.project.gamegame.common.model.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,16 +11,16 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-public class Reply extends BaseEntity {@Id
+public class ReReply extends BaseEntity {@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long reReplyID;
     private Long replyID;
     private Long userID;
     private Long boardID;
     private String contents;
-    private String reReply;
 
-    public void replyUpdate(ReplyRegister replyRegister){
-        this.userID=replyRegister.getUserID();
-        this.boardID=replyRegister.getBoardID();
-        this.contents =replyRegister.getContents();
-        this.reReply=replyRegister.getReReply();}}
+    public void reReplyUpdate(ReReplyRegister reReplyRegister){
+        this.replyID=reReplyRegister.getReplyID();
+        this.userID=reReplyRegister.getUserID();
+        this.boardID=reReplyRegister.getBoardID();
+        this.contents=reReplyRegister.getContents();}}
