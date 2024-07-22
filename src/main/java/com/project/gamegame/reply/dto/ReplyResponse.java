@@ -1,30 +1,27 @@
 package com.project.gamegame.reply.dto;
-
 import com.project.gamegame.reply.domain.Reply;
 import lombok.*;
-
 import java.util.List;
 import java.util.stream.Collectors;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class ReplyResponse {
+    private String replyTitle;
     private Long userID;
     private Long boardID;
-    private String content;
-    private String reReply;
+    private String contents;
 
     public static ReplyResponse replyResponse(Reply reply){
         return ReplyResponse.builder()
+                .replyTitle(reply.getReplyTitle())
                 .userID(reply.getUserID())
                 .boardID(reply.getBoardID())
-                .content(reply.getContent())
-                .reReply(reply.getReReply()).build();}
+                .contents(reply.getContents()).build();}
 
-    public static List<ReplyResponse> getAll(List<Reply> replyList){
+    public static List<ReplyResponse> getAllReplies(List<Reply> replyList){
         return replyList.stream()
                 .map(ReplyResponse::replyResponse)
                 .collect(Collectors.toList());}}

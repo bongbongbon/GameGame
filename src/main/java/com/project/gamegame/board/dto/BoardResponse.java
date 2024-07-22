@@ -1,12 +1,8 @@
 package com.project.gamegame.board.dto;
-
-
 import com.project.gamegame.board.domain.Board;
 import lombok.*;
-
 import java.util.List;
 import java.util.stream.Collectors;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -17,11 +13,7 @@ public class BoardResponse {
     private String userName;//1]
     private String title;//[1]
     private String contents;//[1]
-    private String views;//[1]
-
-    private String review="";
-    private String reply="";
-    private Long hits;//[1]
+    private Long views;//[1]
     private Long likes;//[1]
 
     public static BoardResponse fromEntity(Board board) {
@@ -31,17 +23,9 @@ public class BoardResponse {
                 .title(board.getTitle())
                 .contents(board.getContents())
                 .views(board.getViews())
-                .review(board.getReview())
-                .reply(board.getReply())
-                .hits(board.getHits())
-                .likes(board.getLikes())
-                .build();
-    }
+                .likes(board.getLikes()).build();}
 
     public static List<BoardResponse> fromEntity(List<Board> boardList){
         return boardList.stream()
                 .map(BoardResponse::fromEntity)
-                .collect(Collectors.toList());
-    }
-
-}
+                .collect(Collectors.toList());}}

@@ -1,5 +1,5 @@
 package com.project.gamegame.reply.service;
-
+import com.project.gamegame.common.exception.CustomException;
 import com.project.gamegame.reply.domain.Reply;
 import com.project.gamegame.reply.domain.ReplyRegister;
 import com.project.gamegame.reply.dto.ReplyResponse;
@@ -7,7 +7,6 @@ import com.project.gamegame.reply.repository.ReplyRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -15,11 +14,14 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ReplyService {
     private final ReplyRepository replyRepository;
-    public Object makeReply(ReplyRegister replyRegister) {
+    public Reply makeReply(ReplyRegister replyRegister) {
+        if(replyRepository.existsByReplyTitle(replyRegister.getReplyTitle())){
+            throw CustomException.ALREADY_EXISTS;}
         return replyRepository.save(ReplyRegister.replyForm(replyRegister));}
 
     public Reply getReply(Long replyID) {
-        return replyRepository.findById(replyID).orElse(null);}
+        return replyRepository.findById(replyID)
+                .orElseThrow(()-> CustomException.BOARD_NOT_FOUND);}
 
     public Reply updateReply(Long replyID, ReplyRegister replyRegister) {
         Reply saved=replyRepository.findById(replyID)
@@ -30,4 +32,4 @@ public class ReplyService {
     replyRepository.deleteByReplyID(replyID);}
 
     public List<ReplyResponse> getAllReplies(){
-        return ReplyResponse.getAll(replyRepository.findAll());}}
+        return ReplyResponse.getAllReplies(replyRepository.findAll());}}
