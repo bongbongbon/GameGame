@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class ReReplyController {
     private final ReReplyService reReplyService;
 
-    @PostMapping("/make")
+     @PostMapping("/make")
     public ApiSuccessResponse<?> makeReReply(@RequestBody ReReplyRegister reReplyRegister){
         return ApiSuccessResponse.from(reReplyService.makeReReply(reReplyRegister));}
 

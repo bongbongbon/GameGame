@@ -32,10 +32,10 @@ public class BoardService {
     public void deleteBoard(Long boardID) {
         boardRepository.deleteByBoardID(boardID);}
 
-    public void boardHits(Long boardID) {
+    public void boardViews(Long boardID) {
         Board board = boardRepository.findById(boardID)
                 .orElseThrow(() -> CustomException.BOARD_NOT_FOUND);
-        board.setHits(board.getHits() + 1);boardRepository.save(board);}
+        board.setViews(board.getViews() + 1);boardRepository.save(board);}
 
     public void boardLikes(Long boardID) {
         Board board = boardRepository.findById(boardID)

@@ -9,17 +9,17 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @Builder
 public class ReplyResponse {
+    private String replyTitle;
     private Long userID;
     private Long boardID;
     private String contents;
-    private String reReply;
 
     public static ReplyResponse replyResponse(Reply reply){
         return ReplyResponse.builder()
+                .replyTitle(reply.getReplyTitle())
                 .userID(reply.getUserID())
                 .boardID(reply.getBoardID())
-                .contents(reply.getContents())
-                .reReply(reply.getReReply()).build();}
+                .contents(reply.getContents()).build();}
 
     public static List<ReplyResponse> getAllReplies(List<Reply> replyList){
         return replyList.stream()

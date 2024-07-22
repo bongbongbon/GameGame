@@ -10,7 +10,7 @@ public class BoardRegister {
     private String userName;//1]
     private String title;//[1]
     private String contents;//[1]
-    private Long hits;//[1]
+    private Long views;//[1]
     private Long likes;//[1]
 
     public static Board boardForm(BoardRegister boardRegister) {
@@ -18,5 +18,5 @@ public class BoardRegister {
                 .userName(boardRegister.getUserName())
                 .title(boardRegister.getTitle())
                 .contents(boardRegister.getContents())
-                .hits(boardRegister.getHits())
+                .views(boardRegister.getViews())
                 .likes(boardRegister.getLikes()).build();}}

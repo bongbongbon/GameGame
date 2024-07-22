@@ -6,13 +6,13 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class ReplyRegister {
+    private String replyTitle;
     private Long userID;
     private Long boardID;
     private String contents;
-    private String reReply;
 
     public static Reply replyForm(ReplyRegister replyRegister){
-        return Reply.builder().userID(replyRegister.getUserID())
+        return Reply.builder().replyTitle(replyRegister.getReplyTitle())
+                .userID(replyRegister.getUserID())
                 .boardID(replyRegister.getBoardID())
-                .contents(replyRegister.getContents())
-                .reReply(replyRegister.getReReply()).build();}}
+                .contents(replyRegister.getContents()).build();}}

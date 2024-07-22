@@ -15,6 +15,8 @@ import java.util.List;
 public class ReplyService {
     private final ReplyRepository replyRepository;
     public Reply makeReply(ReplyRegister replyRegister) {
+        if(replyRepository.existsByReplyTitle(replyRegister.getReplyTitle())){
+            throw CustomException.ALREADY_EXISTS;}
         return replyRepository.save(ReplyRegister.replyForm(replyRegister));}
 
     public Reply getReply(Long replyID) {

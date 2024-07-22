@@ -1,4 +1,6 @@
 package com.project.gamegame.reply.controller;
+import com.project.gamegame.board.domain.Board;
+import com.project.gamegame.board.domain.BoardRegister;
 import com.project.gamegame.common.response.ApiSuccessResponse;
 import com.project.gamegame.reply.domain.Reply;
 import com.project.gamegame.reply.domain.ReplyRegister;

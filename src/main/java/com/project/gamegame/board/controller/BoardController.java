@@ -19,7 +19,8 @@ public class BoardController {
         return ApiSuccessResponse.from(boardService.makeBoard(boardRegister));}
 
     @GetMapping("/get/{boardID}")
-    public ApiSuccessResponse<Board> getBoard(@PathVariable(name = "boardID") Long boardID) {
+    public ApiSuccessResponse<Board> getBoard
+            (@PathVariable(name = "boardID") Long boardID) {
         return ApiSuccessResponse.from(boardService.getBoard(boardID));}
 
     @RequestMapping(value = "/update/{boardID}",
@@ -38,8 +39,8 @@ public class BoardController {
 
     @RequestMapping(value = "/{boardID}/hits",
             method = RequestMethod.PUT, name = "boardHits")
-    public void boardHits(@PathVariable("boardID") Long boardID) {
-        boardService.boardHits(boardID);}
+    public void boardViews(@PathVariable("boardID") Long boardID) {
+        boardService.boardViews(boardID);}
 
     @RequestMapping(value = "{boardID}/likes",
             method = RequestMethod.PUT, name = "boardLikes")

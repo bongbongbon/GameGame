@@ -13,7 +13,7 @@ public class BoardResponse {
     private String userName;//1]
     private String title;//[1]
     private String contents;//[1]
-    private Long hits;//[1]
+    private Long views;//[1]
     private Long likes;//[1]
 
     public static BoardResponse fromEntity(Board board) {
@@ -22,7 +22,7 @@ public class BoardResponse {
                 .userName(board.getUserName())
                 .title(board.getTitle())
                 .contents(board.getContents())
-                .hits(board.getHits())
+                .views(board.getViews())
                 .likes(board.getLikes()).build();}
 
     public static List<BoardResponse> fromEntity(List<Board> boardList){

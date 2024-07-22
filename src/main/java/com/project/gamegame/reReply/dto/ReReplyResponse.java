@@ -10,12 +10,14 @@ import java.util.stream.Collectors;
 @Builder
 public class ReReplyResponse {
     private Long replyID;
+    private String reReplyTitle;
     private Long userID;
     private Long boardID;
     private String contents;
 
     public static ReReplyResponse reReplyResponse(ReReply reReply){
         return ReReplyResponse.builder()
+                .reReplyTitle(reReply.getReReplyTitle())
                 .replyID(reReply.getReReplyID())
                 .userID(reReply.getUserID())
                 .boardID(reReply.getBoardID())

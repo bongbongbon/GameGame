@@ -14,13 +14,13 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class Reply extends BaseEntity {@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long replyID;
+    private String replyTitle;
     private Long userID;
     private Long boardID;
     private String contents;
-    private String reReply;
 
     public void replyUpdate(ReplyRegister replyRegister){
+        this.replyTitle =replyRegister.getReplyTitle();
         this.userID=replyRegister.getUserID();
         this.boardID=replyRegister.getBoardID();
-        this.contents =replyRegister.getContents();
-        this.reReply=replyRegister.getReReply();}}
+        this.contents =replyRegister.getContents();}}
