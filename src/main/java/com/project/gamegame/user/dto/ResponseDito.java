@@ -1,4 +1,4 @@
-package com.project.gamegame.user.dito;
+package com.project.gamegame.user.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

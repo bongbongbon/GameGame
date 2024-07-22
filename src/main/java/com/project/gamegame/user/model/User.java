@@ -17,6 +17,7 @@ import java.sql.Timestamp;
 @Table(name = "users")
 public class User {
 
+    //회원 가입
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
