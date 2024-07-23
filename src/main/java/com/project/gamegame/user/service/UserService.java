@@ -26,7 +26,7 @@
 //        String email = signUpRequestDTO.getEmail();
 //        boolean exists = userRepository.existsByEmail(email);
 //        if (exists) {
-//            throw new CustomException(ErrorCode.EXISTS_);
+//            throw new CustomException(ErrorCode.EXISTS_USER_EMAIL);
 //        }
 //        String encodedPassword = encoder.encode(signUpRequestDTO.getPassword());
 //        String profileImagePath = uploadProfileImage(profileImage);

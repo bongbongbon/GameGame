@@ -25,17 +25,17 @@ public class UserInfoModifyRequestDTO {
     @NotBlank
     private String address;
 
-    public User toModifyEntity(User user, UserInfoModifyRequestDTO userInfoModifyRequestDTO, String profileImagePath) {
-        return User.builder()
-                .id(user.getId())
-                .email(user.getEmail())
-                .password(user.getPassword())
-                .name(userInfoModifyRequestDTO.name)
-                .age(user.getAge())
-                .phone(userInfoModifyRequestDTO.phone)
-                .address(userInfoModifyRequestDTO.address)
-                .role(user.getRole())
-                .profileImage(profileImagePath)
-                .build();
-    }
+//    public User toModifyEntity(User user, UserInfoModifyRequestDTO userInfoModifyRequestDTO, String profileImagePath) {
+//        return User.builder()
+//                .id(user.getId())
+//                .email(user.getEmail())
+//                .password(user.getPassword())
+//                .name(userInfoModifyRequestDTO.name)
+//                .age(user.getAge())
+//                .phone(userInfoModifyRequestDTO.phone)
+//                .address(userInfoModifyRequestDTO.address)
+//                .role(user.getRole())
+//                .profileImage(profileImagePath)
+//                .build();
+//    }
 }
