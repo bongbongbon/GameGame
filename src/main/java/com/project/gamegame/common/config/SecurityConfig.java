@@ -36,7 +36,7 @@ public class SecurityConfig {
                         -> authorize
 
                         .requestMatchers(
-                                "/user/checkId",
+                                "api/user/checkId",
                                 "/user/register",
                                 "/user/login").permitAll()
                         .requestMatchers("/api/user/**").permitAll()

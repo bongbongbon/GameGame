@@ -23,15 +23,12 @@ public class User extends BaseEntity {
     //회원 가입
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(nullable = false, length = 100, unique = true)
-    private String username;
+    private String email;
 
     @Column(length = 100)
     private String password;
-
-    @Column(nullable = false, length = 50)
-    private String email;
 
 }

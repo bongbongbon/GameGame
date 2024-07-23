@@ -7,6 +7,7 @@ import com.project.gamegame.user.dto.request.SignUpRequestDTO;
 import com.project.gamegame.user.dto.request.UserDeleteRequestDTO;
 import com.project.gamegame.user.dto.response.SignInResponseDTO;
 import com.project.gamegame.user.dto.response.UserInfoModifyResponseDTO;
+import com.project.gamegame.user.dto.response.UserResponseDTO;
 import com.project.gamegame.user.model.User;
 import com.project.gamegame.user.repository.UserRepository;
 import jakarta.transaction.Transactional;
@@ -23,16 +24,15 @@ public class UserService {
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     //회원가입
-    public boolean SignUp(SignUpRequestDTO signUpRequestDTO) {
-        String email = signUpRequestDTO.getEmail();
-        boolean exists = userRepository.existsByEmail(email);
-        if (exists) {
-            throw new CustomException(ErrorCode.EXISTS_USER_EMAIL);
-        }
-        String encodedPassword = bCryptPasswordEncoder.encode(signUpRequestDTO.getPassword());
-//        User user = signUpRequestDTO.fromEn(, encodedPassword);
-//        userRepository.save(user);
-        return true;
+    public UserResponseDTO SignUp(SignUpRequestDTO signUpRequestDTO) {
+
+        User user = User.builder()
+                .email(signUpRequestDTO.getEmail())
+                .password(bCryptPasswordEncoder.encode(signUpRequestDTO.getPassword()))
+                .build();
+
+
+        return UserResponseDTO.fromEntity(userRepository.save(user));
     }
 
 

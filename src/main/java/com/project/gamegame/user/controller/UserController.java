@@ -17,16 +17,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/user")
+@RequestMapping("/api/users")
 public class UserController {
 
     private final UserService userService;
 
     @PostMapping("/signup")
-    public ResponseEntity<?>signUp(
-            @RequestPart("user") @Validated SignUpRequestDTO signUpReeuestDTO) {
-        boolean result = userService.SignUp(signUpReeuestDTO);
-        return ResponseEntity.ok().body(result);
+    public ResponseEntity<?>signUp(@RequestBody @Validated SignUpRequestDTO signUpRequestDTO) {
+        return ResponseEntity.ok().body(userService.SignUp(signUpRequestDTO));
     }
 
 
