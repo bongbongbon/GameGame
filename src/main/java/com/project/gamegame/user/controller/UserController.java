@@ -17,15 +17,15 @@
 //@RestController
 //@RequiredArgsConstructor
 //@RequestMapping("/user")
-//public class UserController2 {
-//    private final UserController2 userService;
+//public class UserController {
+//    private final UserController userService;
 //
 //    @PostMapping("/signup")
 //    public ResponseEntity<?>signUp(
 //            @RequestPart("user") @Validated SignUpRequestDTO signUpReeuestDTO,
 //            @RequestPart(value = "profileImage", required = false)MultipartFile profileImage
 //            ) {
-//        boolean result = userService.SignUp(signUpReeuestDTO, profileImage);
+//        boolean result = userService.SignUp(signUpRequestDTO, profileImage);
 //        return ResponseEntity.ok().body(result);
 //    }
 //

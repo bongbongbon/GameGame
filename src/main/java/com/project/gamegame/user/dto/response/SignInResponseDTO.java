@@ -13,7 +13,7 @@ import javax.swing.*;
 @NoArgsConstructor
 @Builder
 public class SignInResponseDTO {
-    private Long id;
+    private long id;
 
     private String email;
 

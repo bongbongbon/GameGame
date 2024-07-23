@@ -46,13 +46,13 @@
 //    public SignInResponseDTO signIn(SignInRequestDTO signInRequestDTO) {
 //        String email = signInRequestDTO. getEmail();
 //        User user = userRepository.findByEmail(email)
-//                .orElseThrow(() -> new CustomException(ErrorCode.NOT_EXISTS));
+//                .orElseThrow(() -> new CustomException(ErrorCode.NOT_EXISTS_USER_EMAIL));
 //
 //        String inputPassword = signInRequestDTO.getPassword();
 //        String encoderPassword = user.getPassword();
 //
 //        if (!encoder.matches(inputPassword, encoderPassword)) {
-//            throw new CustomException(ErrorCode.NOT_ACCORD_USER);
+//            throw new CustomException(ErrorCode.NOT_ACCORD_USER_PASSWORD);
 //        }
 //        String token = tokenProvider.createToken(user);
 //        return new SignInResponseDTO(token, user);
@@ -60,7 +60,7 @@
 //
 //    public UserInfoModifyResponseDTO userInfoModifyResponseDTO(UesrInfoModifyRequestDTO uesrInfoModifyRequestDTO, MultipartFile profileImage, TokenUserInfo tokenUserInfo) {
 //        User user = userRepository.findById(tokenUserInfo.getId())
-//                .orElseThrow(() -> new CustomException(ErrorCode.NOT_EXI));
+//                .orElseThrow(() -> new CustomException(ErrorCode.NOT_EXISTS_USER_EMAIL));
 //
 //        String profileImagePath = uploadProfileImage(profileImage);
 //        User modifyUser = userInfoModifyRequestDTO.toModifyEntity(user, userInfoModifyReqestDTO, profileImagePath);
