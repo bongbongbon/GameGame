@@ -23,36 +23,4 @@ public class SignUpRequestDTO {
     @Size(min = 5, max = 20)
     private String password;
 
-    @NotBlank
-    @Size(min = 2, max = 10)
-    private String name;
-
-    @NotBlank
-    @Size(max = 13)
-    private String phone;
-
-    @NotNull
-    @Min(value = 13)
-    private Integer age;
-
-    @NotBlank
-    private String address;
-
-    @NotBlank
-    private String detailAddress;
-
-    private Role role;
-
-//    public User toEntity(String profileImagePath, String encodedPassword) {
-//        return User.builder()
-//                .email(this.email)
-//                .password(encodedPassword)
-//                .name(this.name)
-//                .phone(this.phone)
-//                .address(this.address)
-//                .detailAddress(this.detailAddress)
-//                .role(this.role)
-//                .profileImage(profileImagePath)
-//                .build();
-//    }
 }
