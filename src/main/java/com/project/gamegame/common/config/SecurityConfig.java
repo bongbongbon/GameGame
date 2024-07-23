@@ -35,15 +35,10 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize
                         -> authorize
 
-                        .requestMatchers(
-                                "api/user/checkId",
-                                "/user/register",
-                                "/user/login").permitAll()
-                        .requestMatchers("/api/user/**").permitAll()
-                        .requestMatchers("/user/**").permitAll()
-                        .requestMatchers("/api/**").permitAll()
+                        .requestMatchers("/api/users/**").permitAll()
                         .requestMatchers("/board/**").permitAll()
                         .requestMatchers("/reply/**").permitAll()
+                        .requestMatchers("/api/quizzes/**").permitAll()
                         .requestMatchers("/h2-console/**").permitAll()
 
                 )
