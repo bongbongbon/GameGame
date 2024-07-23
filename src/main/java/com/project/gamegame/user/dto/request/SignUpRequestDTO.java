@@ -43,16 +43,16 @@ public class SignUpRequestDTO {
 
     private Role role;
 
-    public User toEntity(String profileImagePath, String encodedPassword) {
-        return User.builder()
-                .email(this.email)
-                .password(encodedPassword)
-                .name(this.name)
-                .phone(this.phone)
-                .address(this.address)
-                .detailAddress(this.detailAddress)
-                .role(this.role)
-                .profileImage(profileImagePath)
-                .build();
-    }
+//    public User toEntity(String profileImagePath, String encodedPassword) {
+//        return User.builder()
+//                .email(this.email)
+//                .password(encodedPassword)
+//                .name(this.name)
+//                .phone(this.phone)
+//                .address(this.address)
+//                .detailAddress(this.detailAddress)
+//                .role(this.role)
+//                .profileImage(profileImagePath)
+//                .build();
+//    }
 }
